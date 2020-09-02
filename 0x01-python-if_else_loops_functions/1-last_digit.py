@@ -6,9 +6,9 @@ if number >= 0:
 else:
     last_digit = number % -10
 if last_digit > 5:
-    end = 'and is greater than 5'
+    end = 'greater than 5'
 elif last_digit == 0:
-    end = 'and is 0'
+    end = '0'
 else:
-    end = 'and is less than 6 and not 0'
-print("Last digit {:d} is {:d} {}".format(number, last_digit, end))
+    end = 'less than 6 and not 0'
+print("Last digit {:d} is {:d} and is {}".format(number, last_digit, end))

@@ -11,4 +11,4 @@ elif last_digit == 0:
     end = '0'
 else:
     end = 'less than 6 and not 0'
-print("Last digit {:d} is {:d} and is {}".format(number, last_digit, end))
+print("Last digit {:d} is {:d} and is {:s}".format(number, last_digit, end))

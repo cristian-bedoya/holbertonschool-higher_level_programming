@@ -30,8 +30,12 @@ int is_palindrome(listint_t **head)
 	listint_t *aux = *head;
 	int n_elements = element_list(aux);
 
-	int arr[1024];
-	int index, i = 0;
+	int *arr, index;
+	int i = 0;
+
+	arr = malloc(sizeof(int) * n_elements);
+	if (!arr)
+		return (1);
 
 	for (index = 0; aux; index++)
 	{
@@ -51,7 +55,10 @@ int is_palindrome(listint_t **head)
 	}
 	if (i == n_elements / 2)
 	{
+		free(arr);
 		return (1);
 	}
+	free(arr);
 	return (0);
+
 }

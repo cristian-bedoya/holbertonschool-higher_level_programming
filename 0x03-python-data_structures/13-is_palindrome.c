@@ -1,12 +1,12 @@
 #include "lists.h"
 
 /**
- *  listint_len - Calcuate the number of nodes in a linked list.
+ *  element_list - Calcuate the number of nodes in a linked list.
  * @head: head of the linked list.
  *
  * Return: number of nodes of the linked list.
  */
-int element_list (listint_t * head)
+int element_list(listint_t *head)
 {
 	int count;
 
@@ -25,15 +25,15 @@ int element_list (listint_t * head)
  *
  * Return: 1 if the singly linked list is palidrome, 0 otherwise.
  */
-int is_palindrome (listint_t ** head)
+int is_palindrome(listint_t **head)
 {
 	listint_t *aux = *head;
-	int n_elements = element_list (aux);
+	int n_elements = element_list(aux);
 
 	int *arr, index;
 	int i = 0;
 
-	arr = malloc (sizeof (int) * n_elements);
+	arr = malloc(sizeof(int) * n_elements);
 	if (!arr)
 		return (1);
 
@@ -55,10 +55,10 @@ int is_palindrome (listint_t ** head)
 	}
 	if (i == n_elements / 2)
 	{
-		free (arr);
+		free(arr);
 		return (1);
 	}
-	free (arr);
+	free(arr);
 	return (0);
 
 }

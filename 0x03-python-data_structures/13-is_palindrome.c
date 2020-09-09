@@ -19,7 +19,7 @@ int is_palindrome(listint_t **head)
 	for (n_elements = 0; aux; n_elements++)
 		aux = aux->next;
 
-	arr = malloc(sizeof(int) * n_elements);
+	arr = malloc(sizeof(int) * (n_elements + 1));
 
 	if (!arr)
 		return (1);
@@ -30,7 +30,7 @@ int is_palindrome(listint_t **head)
 		aux_2 = aux_2->next;
 	}
 
-	while (i < index)
+	while (i < index / 2)
 	{
 		if (arr[i] != arr[index - 1])
 		{

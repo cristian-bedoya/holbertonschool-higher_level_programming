@@ -46,10 +46,14 @@ int is_palindrome(listint_t **head)
 	while (i < index)
 	{
 		if (arr[i] != arr[index - 1])
+		{
+			free(arr);
 			return (0);
+		}
 		i++;
 		index--;
 	}
+	free(arr);
 	return (1);
 
 }

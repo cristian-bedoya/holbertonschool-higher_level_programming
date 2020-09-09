@@ -43,22 +43,13 @@ int is_palindrome(listint_t **head)
 		aux = aux->next;
 	}
 
-	while (i < n_elements / 2)
+	while (i < index)
 	{
-		if (arr[i] == arr[index - 1])
-		{
-			i++;
-			index--;
-			continue;
-		}
-		break;
+		if (arr[i] != arr[index - 1])
+			return (0);
+		i++;
+		index--;
 	}
-	if (i == n_elements / 2)
-	{
-		free(arr);
-		return (1);
-	}
-	free(arr);
-	return (0);
+	return (1);
 
 }

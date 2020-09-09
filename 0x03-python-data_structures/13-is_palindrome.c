@@ -1,24 +1,5 @@
 #include "lists.h"
-
-/**
- *  element_list - Calcuate the number of nodes in a linked list.
- * @head: head of the linked list.
- *
- * Return: number of nodes of the linked list.
- */
-int element_list(listint_t *head)
-{
-	int count;
-
-	if (!head)
-		return (0);
-
-	for (count = 0; head; count++)
-		head = head->next;
-
-	return (count);
-}
-
+#include <stdio.h>
 /**
  * is_palindrome - check if a singly linked list of integer is palindrome
  * @head: pointer first element of the linked list.
@@ -27,20 +8,26 @@ int element_list(listint_t *head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *aux = *head;
-	int n_elements = element_list(aux);
+	listint_t *aux = *head, *aux_2 = *head;
+	int n_elements = 0;
+	int i = 0, index = 0;
+	int *arr;
 
-	int *arr, index;
-	int i = 0;
+	if (!head)
+		return (0);
+	
+	for (n_elements = 0; aux; n_elements++)
+		aux = aux->next;
 
 	arr = malloc(sizeof(int) * n_elements);
+
 	if (!arr)
 		return (1);
 
-	for (index = 0; aux; index++)
+	for (index = 0; aux_2; index++)
 	{
-		arr[index] = aux->n;
-		aux = aux->next;
+		arr[index] = aux_2->n;
+		aux_2 = aux_2->next;
 	}
 
 	while (i < index)

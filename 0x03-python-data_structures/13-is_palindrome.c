@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *aux = *head;
 	int i = 0, index = 0;
-	int arr[2048];
+	int arr[4096];
 
 	if (!head)
 		return (0);
@@ -21,7 +21,7 @@ int is_palindrome(listint_t **head)
 		aux = aux->next;
 	}
 
-	while (i < index / 2)
+	while (i < index)
 	{
 		if (arr[i] != arr[index - 1])
 		{

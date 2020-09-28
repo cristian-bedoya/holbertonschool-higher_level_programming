@@ -29,6 +29,12 @@ class Rectangle:
             n_string += '\n'
         return n_string[:-1]
 
+    def __repr__(self):
+        """ Return a string representation of the rectangle
+        to be able to recreate
+        """
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
     @property
     def width(self):
         """Retrieves the width."""

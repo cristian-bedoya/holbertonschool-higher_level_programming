@@ -18,8 +18,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes the data."""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     def __str__(self):
@@ -98,4 +98,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Returns a new Rectangle instance with width == height == size"""
-        return cls(size, size)
+        return Rectangle(size, size)

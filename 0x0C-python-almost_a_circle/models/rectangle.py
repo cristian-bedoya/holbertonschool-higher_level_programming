@@ -52,7 +52,7 @@ class Rectangle(Base):
     def x(self, value):
         """Sets the x attribute."""
         if not isinstance(value, int):
-            raise TypeError('y must be an integer')
+            raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
         self.__x = value

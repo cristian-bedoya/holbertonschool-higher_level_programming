@@ -10,8 +10,8 @@ if __name__ == '__main__':
                          user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
-                '{}' ORDER BY states.id ASC".format(sys.argv[4]))
+    cur.execute("SELECT * FROM states WHERE name=%s\
+                ORDER BY states.id ASC", (sys.argv[4],))
     lines = cur.fetchall()
     for line in lines:
         print(line)

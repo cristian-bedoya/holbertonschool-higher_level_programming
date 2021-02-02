@@ -2,7 +2,7 @@
 let message;
 const leng1 = process.argv.length;
 if (leng1 < 3) {
-  message = 'No Argument';
+  message = 'No argument';
   console.log(message);
 } else if (leng1 === 3) {
   message = 'Argument found';

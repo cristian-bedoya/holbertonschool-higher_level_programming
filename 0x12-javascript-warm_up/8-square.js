@@ -1,8 +1,6 @@
 #!/usr/bin/node
 const argPass = process.argv[2];
-if (process.argv.length === 2) {
-  console.log('Missing size');
-} else {
+if (parseInt(process.argv[2])) {
   for (let i = 0; i < argPass; i++) {
     let y = '';
     for (let j = 0; j < argPass; j++) {
@@ -10,4 +8,6 @@ if (process.argv.length === 2) {
     }
     console.log(y);
   }
+} else {
+  console.log('Missing size');
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor (h, w) {
+  constructor (w, h) {
     if (Number.isInteger(h) && Number.isInteger(w) && h > 0 && w > 0) {
       this.height = h;
       this.width = w;

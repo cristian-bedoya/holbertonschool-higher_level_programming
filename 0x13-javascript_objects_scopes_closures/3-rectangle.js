@@ -1,6 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor (h, w) {
+  constructor (w, h) {
     if (Number.isInteger(h) && Number.isInteger(w) && h > 0 && w > 0) {
       this.height = h;
       this.width = w;
@@ -8,9 +8,9 @@ class Rectangle {
   }
 
   print () {
-    for (let i = 0; i < this.width; i++) {
+    for (let i = 0; i < this.height; i++) {
       let y = '';
-      for (let j = 0; j < this.height; j++) {
+      for (let j = 0; j < this.width; j++) {
         y += 'X';
       }
       console.log(y);

@@ -7,13 +7,15 @@ request(url, function (error, response, body) {
   } else {
     let counter = 0;
     const arrayresults = JSON.parse(body).results;
-    const character18 = 'https://swapi-api.hbtn.io/api/people/18/'
-    for (let movie of arrayresults) {
-      const chars = movie.characters;
-      if (chars.includes(character18)) {
-        counter ++;
+    const id18 = '18';
+    for (const movies of arrayresults) {
+      const chars = movies.characters;
+      for (const list of chars) {
+        if (list.includes(id18)) {
+          counter++;
+        }
       }
-      }
+    }
     console.log(counter);
   }
 });
